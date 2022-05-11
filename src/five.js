@@ -4,7 +4,17 @@ export default function createArray(num1, num2){
   let numArray = [];
   const startNumber = num1;
   const  endNumber = num2;
+  
   numArray = [startNumber, endNumber];
 
-  return numArray.sort();
+  numArray.sort();
+  
+  let arrayOfNumbers = [];
+  
+  for (let i = numArray[0]; i <= numArray[1]; i++) {
+    arrayOfNumbers.push(i);
+  }
+
+  return arrayOfNumbers;
+
 }
