@@ -1,6 +1,6 @@
 const { TestScheduler } = require("jest");
 
-export default function createArray(num1, num2){
+export function createArray(num1, num2){
   let numArray = [];
   const startNumber = num1;
   const  endNumber = num2;
@@ -17,4 +17,16 @@ export default function createArray(num1, num2){
 
   return arrayOfNumbers;
 
+}
+
+export function minusFiveArray (num1, num2) {
+  let arrayOfNumbers = createArray(num1, num2);
+  let outputArray = [];
+  
+  arrayOfNumbers.forEach(function (number) {
+    if (number.toString().includes("5") === false) {
+      outputArray.push(number);
+    }
+  });   
+  return outputArray;
 }
